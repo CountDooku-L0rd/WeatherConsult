@@ -1,0 +1,6 @@
+.filters{
+    display: flex;
+    justify-content: space-between;
+    width: 622px;
+    margin-bottom: 119px;
+}

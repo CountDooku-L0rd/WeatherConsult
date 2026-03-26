@@ -12,29 +12,29 @@
         <main class="main">
             <h1 class="main__title">Консультант по погоде</h1>
             <section class="filters">
-                <div class="filters__temperature">
+                <div class="filters__item">
                     <label class="filters__text" for="temperatureInput">Температура</label>
-                    <input class="input__num" type="number" min="-100" max="100" value="0" id="temperatureInput">
+                    <input class="filters__input-num" type="number" min="-100" max="100" value="0" id="temperatureInput">
                     <p class="filters__text">°C</p>
                 </div>
-                <div class="filters__humidity">
+                <div class="filters__item">
                     <label class="filters__text" for="humiditySelect">Влажность</label>
-                    <select class="select" id="humiditySelect">
-                        <option class="select__option">низкая</option>
-                        <option class="select__option">средняя</option>
-                        <option class="select__option">высокая</option>
+                    <select class="filters__select" id="humiditySelect">
+                        <option class="filters__select-option">низкая</option>
+                        <option class="filters__select-option">средняя</option>
+                        <option class="filters__select-option">высокая</option>
                     </select>
                 </div>
-                <div class="filters__precipitation">
+                <div class="filters__item">
                     <label class="filters__text" for="precipitationInput">Осадки</label>
                     <input class="input__checkbox" type="checkbox" id="precipitationInput">
                 </div>
             </section>
             <section class="result">
                 <div>
-                    <p class="result__text">Одежда: Легкая, дышащая, короткие брюки и футболка.</p>
-                    <p class="result__text">Обувь: Легкая — сандалии или открытые туфли</p>
-                    <p class="result__text">Аксессуары: Солнцезащитные очки, головной убор.</p>
+                    <p class="result__text"><span class="result__word-accent">Одежда:</span> Легкая, дышащая, короткие брюки и футболка.</p>
+                    <p class="result__text"><span class="result__word-accent">Обувь:</span> Легкая — сандалии или открытые туфли</p>
+                    <p class="result__text"><span class="result__word-accent">Аксессуары:</span> Солнцезащитные очки, головной убор.</p>
                 </div>
                 <img class="result__img" src="./assets/img/image1.png" alt="Мужчина в лёгкой одежде стоит в парке">
             </section>
