@@ -1,5 +1,5 @@
-.result {
-    display: flex;
+.bad-result {
     width: 421px;
     height: 291px;
+    display: flex;
 }

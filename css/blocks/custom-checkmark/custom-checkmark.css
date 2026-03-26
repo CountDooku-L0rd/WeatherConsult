@@ -1,0 +1,21 @@
+.custom-checkmark {
+    width: 11px;
+    height: 11px;
+    border: 1px solid var(--filters-border-color);
+    position: relative;
+}
+
+.custom-checkmark::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    display: none;
+    background-image: url('../../../assets/svg/check.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.custom-checkbox .filters__precipitation-checkbox:checked + .custom-checkmark::after {
+    display: block;
+}

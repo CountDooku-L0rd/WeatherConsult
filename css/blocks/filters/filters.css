@@ -1,6 +1,7 @@
-.filters{
+.filters {
     display: flex;
-    justify-content: space-between;
+    gap: 60px;
     width: 622px;
+    height: 33px;
     margin-bottom: 119px;
 }

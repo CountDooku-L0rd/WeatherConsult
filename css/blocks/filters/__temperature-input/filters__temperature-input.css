@@ -1,0 +1,22 @@
+.filters__temperature-input {
+    border: 1px solid var(--filters-border-color);
+    border-radius: 7px;
+    text-align: center;
+    width: 54px;
+    height: 29px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 14px;
+    margin-right: 11px;
+}
+
+.filters__temperature-input::-webkit-outer-spin-button,
+.filters__temperature-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.filters__temperature-input:focus {
+    outline: none;
+}
