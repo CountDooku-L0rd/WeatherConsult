@@ -2,5 +2,7 @@
     font-weight: 500;
     font-size: 14px;
     color: var(--text-color);
+    width: 60px;
     margin: 0;
+    margin-left: 14px;
 }

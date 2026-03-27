@@ -16,7 +16,7 @@
 @import './blocks/custom-select/__trigger/custom-select__trigger-border-hide.css';
 @import './blocks/custom-select/__options/custom-select__options.css';
 @import './blocks/custom-select/__option/custom-select__option.css';
-@import './blocks/custom-select/__option/custom-select__option-selected.css';
+@import './blocks/custom-select/__option/custom-select__option-hover.css';
 @import './blocks/custom-select/__options/custom-select__options-hide.css';
 @import './blocks/filters/__precipitation-checkbox/filters__precipitation-checkbox.css';
 @import './blocks/custom-checkbox/custom-checkbox.css';
