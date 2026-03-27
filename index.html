@@ -27,17 +27,26 @@
                 <div class="filters__item">
                     <label class="filters__text">Влажность</label>
                     <div class="custom-select">
-                        <div class="custom-select__trigger">
+                        <div
+                            class="custom-select__trigger"
+                            role="button"
+                            tabindex="1"
+                            aria-haspopup="listbox"
+                            aria-expanded="false">
                             <p class="custom-select__text">средняя</p>
                             <span class="custom-select__arrow"></span>
                         </div>
-                        <div class="custom-select__options custom-select__options-hide">
-                            <div class="custom-select__option">низкая</div>
+                        <div
+                            class="custom-select__options custom-select__options-hide"
+                            role="listbox"
+                            aria-hidden="true">
+                            <div class="custom-select__option" role="option">низкая</div>
                             <div
-                                class="custom-select__option custom-select__option-selected">
+                                class="custom-select__option custom-select__option-selected"
+                                role="option">
                                 средняя
                             </div>
-                            <div class="custom-select__option">высокая</div>
+                            <div class="custom-select__option" role="option">высокая</div>
                         </div>
                     </div>
                 </div>
@@ -83,5 +92,6 @@
                     alt="Изображение показывающее ошибку ввода" />
             </section>
         </main>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>
