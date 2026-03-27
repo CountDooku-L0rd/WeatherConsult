@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px;
+    height: 686px;
+    background-color: var(--main-background-color);
+    border-radius: 8px;
+}

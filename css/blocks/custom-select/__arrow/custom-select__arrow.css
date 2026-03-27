@@ -1,0 +1,8 @@
+.custom-select__arrow {
+    width: 7px;
+    height: 7px;
+    background-image: url('../../../../assets/svg/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    rotate: 180deg;
+}

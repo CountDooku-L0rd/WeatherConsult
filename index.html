@@ -1,14 +1,87 @@
 <!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Консультант по погоде</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <title>Консультант по погоде</title>
+    </head>
+    <body class="body">
+        <main class="main">
+            <h1 class="main__title">Консультант по погоде</h1>
+            <section class="filters">
+                <div class="filters__item">
+                    <label class="filters__text" for="temperatureInput"
+                        >Температура</label
+                    >
+                    <input
+                        class="filters__temperature-input"
+                        type="number"
+                        value="24"
+                        id="temperatureInput" />
+                    <p class="filters__text">°C</p>
+                </div>
+                <div class="filters__item">
+                    <label class="filters__text">Влажность</label>
+                    <div class="custom-select">
+                        <div class="custom-select__trigger">
+                            <p class="custom-select__text">средняя</p>
+                            <span class="custom-select__arrow"></span>
+                        </div>
+                        <div class="custom-select__options custom-select__options-hide">
+                            <div class="custom-select__option">низкая</div>
+                            <div
+                                class="custom-select__option custom-select__option-selected">
+                                средняя
+                            </div>
+                            <div class="custom-select__option">высокая</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__item">
+                    <label class="filters__text custom-checkbox" for="precipitationInput">
+                        Осадки
+                        <input
+                            class="filters__precipitation-checkbox"
+                            type="checkbox"
+                            id="precipitationInput" />
+                        <span class="custom-checkmark"></span>
+                    </label>
+                </div>
+            </section>
+            <section class="result">
+                <div>
+                    <p class="result__text">
+                        <span class="result__word-accent">Одежда:</span> Легкая, дышащая,
+                        короткие брюки и футболка.
+                    </p>
+                    <p class="result__text">
+                        <span class="result__word-accent">Обувь:</span> Легкая — сандалии
+                        или открытые туфли
+                    </p>
+                    <p class="result__text">
+                        <span class="result__word-accent">Аксессуары:</span>
+                        Солнцезащитные очки, головной убор.
+                    </p>
+                </div>
+                <img
+                    class="result__img"
+                    src="./assets/img/image1.jpg"
+                    alt="Мужчина в лёгкой одежде стоит в парке" />
+            </section>
+            <section class="loading-result hidden">
+                <img class="loading-result__preloader" src="assets/svg/preloader.svg" />
+            </section>
+            <section class="bad-result hidden">
+                <p class="bad-result__text">Нет данных</p>
+                <img
+                    class="bad-result__img"
+                    src="./assets/img/bad-result.webp"
+                    alt="Изображение показывающее ошибку ввода" />
+            </section>
+        </main>
+    </body>
 </html>
