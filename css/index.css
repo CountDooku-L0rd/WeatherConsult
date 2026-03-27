@@ -1,7 +1,6 @@
 @import './normalize.css';
 @import './common/common.css';
 @import './fonts/fonts.css';
-@import './blocks/hidden/hidden.css';
 @import './blocks/body/body.css';
 @import './blocks/main/main.css';
 @import './blocks/main/__title/main__title.css';
@@ -12,6 +11,11 @@
 @import './blocks/custom-select/custom-select.css';
 @import './blocks/custom-select/__text/custom-select__text.css';
 @import './blocks/custom-select/__arrow/custom-select__arrow.css';
+@import './blocks/custom-select/__trigger/custom-select__trigger.css';
+@import './blocks/custom-select/__options/custom-select__options.css';
+@import './blocks/custom-select/__option/custom-select__option.css';
+@import './blocks/custom-select/__option/custom-select__option-selected.css';
+@import './blocks/custom-select/__options/custom-select__options-hide.css';
 @import './blocks/filters/__precipitation-checkbox/filters__precipitation-checkbox.css';
 @import './blocks/custom-checkbox/custom-checkbox.css';
 @import './blocks/custom-checkmark/custom-checkmark.css';
@@ -24,3 +28,4 @@
 @import './blocks/bad-result/bad-result.css';
 @import './blocks/bad-result/__text/bad-result__text.css';
 @import './blocks/bad-result/__img/bad-result__img.css';
+@import './blocks/hidden/hidden.css';
