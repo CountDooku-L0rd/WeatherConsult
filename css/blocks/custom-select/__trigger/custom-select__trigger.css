@@ -9,3 +9,7 @@
     border: 1px solid var(--filters-border-color);
     cursor: pointer;
 }
+
+.custom-select__trigger:active {
+    outline: none;
+}

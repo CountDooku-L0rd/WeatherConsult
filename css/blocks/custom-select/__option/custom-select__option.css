@@ -9,3 +9,7 @@
     line-height: 100%;
     font-weight: 500;
 }
+
+.custom-select__option:last-child {
+    border-radius: 0 0 7px 7px;
+}

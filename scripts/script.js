@@ -30,7 +30,7 @@ function preload() {
 
 function showOrHideCustomSelectorList() {
     customSelectList.classList.toggle('custom-select__options-hide')
-    customSelectButton.classList.toggle('custom-select__trigger-border-hide')
+    customSelectButton.classList.toggle('custom-select__trigger-opened')
     arrow.classList.toggle('custom-select__arrow-spin')
 }
 function checkBox() {
@@ -44,7 +44,7 @@ function inPut() {
 }
 function closeCustomSelect() {
     customSelectList.classList.add('custom-select__options-hide')
-    customSelectButton.classList.remove('custom-select__trigger-border-hide')
+    customSelectButton.classList.remove('custom-select__trigger-opened')
     arrow.classList.remove('custom-select__arrow-spin')
 }
 
