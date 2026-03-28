@@ -9,10 +9,6 @@ const result = document.querySelector('.result')
 const loading = document.querySelector('.loading-result')
 let preloaderTimer = null
 
-let temperature = input.value
-let precipitation = checkbox.checked
-let humidity = buttonText.textContent
-
 function preload() {
     if (preloaderTimer) {
         clearTimeout(preloaderTimer)
@@ -28,44 +24,34 @@ function preload() {
     }, 1000)
 }
 
-function showOrHideCustomSelectorList() {
+function toggleCustomSelectorList() {
     customSelectList.classList.toggle('custom-select__options-hide')
     customSelectButton.classList.toggle('custom-select__trigger-opened')
     arrow.classList.toggle('custom-select__arrow-spin')
 }
-function checkBox() {
-    precipitation = checkbox.checked
-    preload()
-}
 
-function inPut() {
-    temperature = input.value
-    preload()
-}
 function closeCustomSelect() {
     customSelectList.classList.add('custom-select__options-hide')
     customSelectButton.classList.remove('custom-select__trigger-opened')
     arrow.classList.remove('custom-select__arrow-spin')
 }
 
-document.addEventListener('click', function (event) {
-    if (
-        !customSelectButton.contains(event.target) &&
-        !customSelectList.contains(event.target)
-    ) {
-        if (!customSelectList.classList.contains('custom-select__options-hide')) {
-            closeCustomSelect()
-        }
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.custom-select')) {
+        closeCustomSelect()
     }
 })
-customSelectButton.addEventListener('click', showOrHideCustomSelectorList)
-checkbox.addEventListener('change', checkBox)
-input.addEventListener('input', inPut)
+customSelectButton.addEventListener('click', toggleCustomSelectorList)
+checkbox.addEventListener('change', () => {
+    preload()
+})
+input.addEventListener('input', () => {
+    preload()
+})
 options.forEach((option) => {
     option.addEventListener('click', function () {
         buttonText.textContent = this.textContent
-        humidity = buttonText.textContent
-        showOrHideCustomSelectorList()
+        toggleCustomSelectorList()
         preload()
     })
 })
