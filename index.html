@@ -27,17 +27,36 @@
                 <div class="filters__item">
                     <label class="filters__text">Влажность</label>
                     <div class="custom-select">
-                        <div class="custom-select__trigger">
+                        <div
+                            class="custom-select__trigger"
+                            role="button"
+                            tabindex="1"
+                            aria-haspopup="listbox"
+                            aria-expanded="false">
                             <p class="custom-select__text">средняя</p>
                             <span class="custom-select__arrow"></span>
                         </div>
-                        <div class="custom-select__options custom-select__options-hide">
-                            <div class="custom-select__option">низкая</div>
-                            <div
-                                class="custom-select__option custom-select__option-selected">
-                                средняя
-                            </div>
-                            <div class="custom-select__option">высокая</div>
+                        <div
+                            class="custom-select__options custom-select__options-hide"
+                            role="listbox"
+                            aria-hidden="true">
+                            <ul class="custom-select__list">
+                                <li
+                                    class="custom-select__option custom-select__option-hover"
+                                    role="option">
+                                    низкая
+                                </li>
+                                <li
+                                    class="custom-select__option custom-select__option-hover"
+                                    role="option">
+                                    средняя
+                                </li>
+                                <li
+                                    class="custom-select__option custom-select__option-hover"
+                                    role="option">
+                                    высокая
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -55,16 +74,22 @@
             <section class="result">
                 <div>
                     <p class="result__text">
-                        <span class="result__word-accent">Одежда:</span> Легкая, дышащая,
-                        короткие брюки и футболка.
+                        <span class="result__word-accent">Одежда:</span>
+                        <span class="result__clothes-describe"
+                            >Легкая, дышащая, короткие брюки и футболка.</span
+                        >
                     </p>
                     <p class="result__text">
-                        <span class="result__word-accent">Обувь:</span> Легкая — сандалии
-                        или открытые туфли
+                        <span class="result__word-accent">Обувь:</span>
+                        <span class="result__shoes-describe"
+                            >Легкая — сандалии или открытые туфли.</span
+                        >
                     </p>
                     <p class="result__text">
                         <span class="result__word-accent">Аксессуары:</span>
-                        Солнцезащитные очки, головной убор.
+                        <span class="result__accessories-describe"
+                            >Солнцезащитные очки, головной убор.</span
+                        >
                     </p>
                 </div>
                 <img
@@ -83,5 +108,6 @@
                     alt="Изображение показывающее ошибку ввода" />
             </section>
         </main>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

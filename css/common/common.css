@@ -2,6 +2,7 @@
     --body-bg-color: #b3b9af;
     --body-border-color: black;
     --text-color: #125300;
-    --filters-border-color: #64a93699;
+    --filters-border-color: rgba(100, 169, 54, 0.6);
     --main-background-color: #ffffff;
+    --filters-hover-color: rgba(100, 169, 54, 0.2);
 }

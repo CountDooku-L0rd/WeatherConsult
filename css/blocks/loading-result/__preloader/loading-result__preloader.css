@@ -9,6 +9,7 @@
 
 .loading-result__preloader {
     animation: spin 2s infinite linear;
+    margin-top: 50px;
     width: 50px;
     height: 50px;
 }
