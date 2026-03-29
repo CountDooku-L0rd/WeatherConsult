@@ -7,6 +7,8 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./css/index.css" />
+        <link rel="icon" href="./assets/img/favicon.jpeg" type="image/jpeg">
+        <script src="./scripts/index.js" type="module"></script>
         <title>Консультант по погоде</title>
     </head>
     <body class="body">
@@ -75,39 +77,32 @@
                 <div>
                     <p class="result__text">
                         <span class="result__word-accent">Одежда:</span>
-                        <span class="result__clothes-describe"
-                            >Легкая, дышащая, короткие брюки и футболка.</span
-                        >
+                        <span class="result__clothes-describe"></span>
                     </p>
                     <p class="result__text">
                         <span class="result__word-accent">Обувь:</span>
-                        <span class="result__shoes-describe"
-                            >Легкая — сандалии или открытые туфли.</span
-                        >
+                        <span class="result__shoes-describe"></span>
                     </p>
                     <p class="result__text">
                         <span class="result__word-accent">Аксессуары:</span>
-                        <span class="result__accessories-describe"
-                            >Солнцезащитные очки, головной убор.</span
-                        >
+                        <span class="result__accessories-describe"></span>
                     </p>
                 </div>
                 <img
                     class="result__img"
-                    src="./assets/img/image1.jpg"
+                    src=""
                     alt="Мужчина в лёгкой одежде стоит в парке" />
             </section>
             <section class="loading-result hidden">
                 <img class="loading-result__preloader" src="assets/svg/preloader.svg" />
             </section>
             <section class="bad-result hidden">
-                <p class="bad-result__text">Нет данных</p>
                 <img
                     class="bad-result__img"
-                    src="./assets/img/bad-result.webp"
+                    src="./assets/svg/no-data.svg"
                     alt="Изображение показывающее ошибку ввода" />
+                <p class="bad-result__text">Нет данных</p>
             </section>
         </main>
-        <script src="./scripts/script.js"></script>
     </body>
 </html>
