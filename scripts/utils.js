@@ -1,48 +1,90 @@
-const customSelectList = document.querySelector('.custom-select__options')
-const arrow = document.querySelector('.custom-select__arrow')
+import { suggests } from './suggests.js'
+
 const customSelectButton = document.querySelector('.custom-select__trigger')
 const result = document.querySelector('.result')
 const loading = document.querySelector('.loading-result')
+const badResult = document.querySelector('.bad-result')
 
-customSelectButton.addEventListener('click', toggleCustomSelectorList)
-document.addEventListener('click', (event) => {
-    if (!event.target.closest('.custom-select')) {
-        closeCustomSelect()
-    }
-})
-
-export function toggleCustomSelectorList() {
-    customSelectList.classList.toggle('custom-select__options-hide')
-    customSelectButton.classList.toggle('custom-select__trigger-opened')
-    arrow.classList.toggle('custom-select__arrow-spin')
-}
-
-export function closeCustomSelect() {
-    customSelectList.classList.add('custom-select__options-hide')
-    customSelectButton.classList.remove('custom-select__trigger-opened')
-    arrow.classList.remove('custom-select__arrow-spin')
-}
-
-export function debounce(func, ms){
-    let timeout;
-    return function() {
+export function debounce(func, ms) {
+    let timeout
+    return function () {
         clearTimeout(timeout)
         timeout = setTimeout(() => func.apply(this, arguments), ms)
     }
 }
 
-export function preload() {
+export function loadRecomendationsWithDelay() {
+    showSpinner()
+    setTimeout(() => {
+        loadRecomendations()
+    }, 1000)
+}
+
+export function showSpinner() {
     result.classList.add('hidden')
+    badResult.classList.add('hidden')
     loading.classList.remove('hidden')
 }
 
-export function loadRecomendations(){
-    let temperature = document.querySelector('.filters__temperature-input').value
-    let humidity = customSelectButton.textContent
+function hideSpinner() {
+    loading.classList.add('hidden')
+}
+
+export function loadRecomendations() {
+    let temperature = parseInt(
+        document.querySelector('.filters__temperature-input').value
+    )
+    let humidity = customSelectButton.textContent.trim()
     let precipitation = document.querySelector('.filters__precipitation-checkbox').checked
 
-    
-    
-    result.classList.remove('hidden')
-    loading.classList.add('hidden')
+    if (temperature > -50 && temperature < 50) {
+        let recomendations = buildRecomendation(temperature, humidity, precipitation)
+        document.querySelector('.result__clothes-describe').textContent =
+            recomendations.clothes
+        document.querySelector('.result__shoes-describe').textContent =
+            recomendations.shoes
+        document.querySelector('.result__accessories-describe').textContent =
+            recomendations.accessories
+        document.querySelector('.result__img').src = recomendations.picture
+        result.classList.remove('hidden')
+    } else {
+        badResult.classList.remove('hidden')
+    }
+    hideSpinner()
+}
+
+function buildRecomendation(temperature, humidity, precepitation) {
+    return suggests[mapTemperature(temperature)][mapHumidity(humidity)][
+        mapPrecipitation(precepitation)
+    ]
+}
+
+function mapTemperature(temperature) {
+    if (temperature < -20) {
+        return 'cold'
+    } else if (temperature < 0) {
+        return 'cool'
+    } else if (temperature < 20) {
+        return 'warm'
+    } else if (temperature < 50) {
+        return 'hot'
+    }
+}
+
+function mapHumidity(humidity) {
+    if (humidity === 'средняя') {
+        return 'mediumHumidity'
+    } else if (humidity === 'низкая') {
+        return 'lowHumidity'
+    } else {
+        return 'highHumidity'
+    }
+}
+
+function mapPrecipitation(precipitation) {
+    if (precipitation) {
+        return 'precipitation'
+    } else {
+        return 'noPrecipitation'
+    }
 }

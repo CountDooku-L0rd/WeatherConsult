@@ -1,9 +1,9 @@
-import * as utils from './utils.js'
+import { loadRecomendationsWithDelay, debounce, loadRecomendations } from './utils.js'
 
-const input = document.querySelector('.filters__temperature-input')
-
-input.addEventListener('input', () => {
-    utils.preload()
-    const debouncedLoad = utils.debounce(utils.loadRecomendations, 1000)
-    debouncedLoad()
-})
+export const setTemperatuteFilter = function () {
+    const input = document.querySelector('.filters__temperature-input')
+    const debouncedLoad = debounce(loadRecomendationsWithDelay, 400)
+    input.addEventListener('input', () => {
+        debouncedLoad()
+    })
+}
